@@ -16,7 +16,7 @@ jobs:
 
     env:
       TF_VAR_env: ${{ github.ref_name == 'main' && 'prod' || 'dev' }}
-      TF_VAR_db_password: ${{ secrets.TF_VAR_db_pass }}
+      TF_VAR_db_password: ${{ secrets.PASS }}
       TF_VAR_vpc_cidr: ${{ vars.TF_VAR_vpc_cidr }}
       TF_VAR_vpc_name: ${{ vars.TF_VAR_vpc_name }}
       TF_VAR_public_subnet_cidrs: ${{ vars.TF_VAR_public_subnet_cidrs }}
